@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Portfolio</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title">Web Developer</h1>
+            <p class="hero-subtitle">モダンなWebサイトを作成します</p>
+            <a href="#projects" class="hero-btn">作品を見る</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>HTML、CSS、JavaScriptを基礎から学び、Webコーダーとして活動を始めました。</p>
+                    <p>クリーンで使いやすいWebサイトの制作を心がけ、常に新しい技術の習得に努めています。</p>
+                    <p>お客様のニーズに合わせた最適なソリューションを提供いたします。</p>
+                </div>
+                <div class="about-image">
+                    <div class="profile-placeholder">Profile Image</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-icon">🌐</div>
+                    <h3>HTML5</h3>
+                    <p>セマンティックなマークアップでアクセシブルなWebサイトを構築</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🎨</div>
+                    <h3>CSS3</h3>
+                    <p>レスポンシブデザインとモダンなスタイリング</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">⚡</div>
+                    <h3>JavaScript</h3>
+                    <p>インタラクティブな機能とユーザビリティの向上</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>あらゆるデバイスに対応したデザイン</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-corporate.svg" alt="コーポレートサイト" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3>コーポレートサイト</h3>
+                        <p>株式会社TechSolutions - IT企業向けコーポレートサイト。レスポンシブデザインとSEO対策を実装。</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <a href="projects/corporate/index.html" class="project-link" target="_blank">詳細を見る</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-landing.svg" alt="ランディングページ" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3>ランディングページ</h3>
+                        <p>EcoClean - 環境に優しいお掃除ロボットの商品紹介LP。アニメーションとCTAを効果的に配置。</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <a href="projects/landing/index.html" class="project-link" target="_blank">詳細を見る</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-portfolio.svg" alt="ポートフォリオサイト" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3>ポートフォリオサイト</h3>
+                        <p>Maya Design Studio - フリーランスデザイナーのポートフォリオサイト。クリエイティブで洗練されたデザイン。</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <a href="projects/portfolio/index.html" class="project-link" target="_blank">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>お気軽にお問い合わせください</h3>
+                    <p>Webサイト制作のご相談やお見積もりなど、何でもお聞かせください。</p>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span>example@email.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <span>080-1234-5678</span>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">メッセージ</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">送信する</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

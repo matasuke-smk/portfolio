@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoClean - 環境に優しいお掃除ロボット | 革新的な自動掃除機</title>
+    <meta name="description" content="EcoCleanは環境に配慮した革新的なお掃除ロボット。AI搭載で効率的な掃除を実現し、再生可能エネルギーで動作します。今なら特別価格でご提供中！">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <span class="logo-icon">🤖</span>
+                    <span>EcoClean</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#features" class="nav-link">特徴</a></li>
+                    <li><a href="#specs" class="nav-link">仕様</a></li>
+                    <li><a href="#testimonials" class="nav-link">お客様の声</a></li>
+                    <li><a href="#pricing" class="nav-link">価格</a></li>
+                </ul>
+                <a href="#order" class="nav-cta">今すぐ注文</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">🌱 環境に優しい革新技術</div>
+                    <h1 class="hero-title">未来のお掃除を<br><span class="highlight">今すぐ体験</span></h1>
+                    <p class="hero-subtitle">AI搭載のEcoCleanが、環境に配慮しながら完璧な掃除を実現。<br>あなたの時間を有効活用し、地球にも優しい生活を始めませんか？</p>
+                    
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🧠</span>
+                            <span>AI自動判断</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔋</span>
+                            <span>ソーラー充電</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🌿</span>
+                            <span>100%リサイクル可能</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta">
+                        <div class="price-display">
+                            <span class="original-price">通常価格: ¥89,800</span>
+                            <span class="sale-price">特別価格: ¥59,800</span>
+                            <span class="discount">33%OFF</span>
+                        </div>
+                        <a href="#order" class="cta-button primary">
+                            <span class="button-text">今すぐ注文する</span>
+                            <span class="button-subtext">送料無料・30日間返金保証</span>
+                        </a>
+                        <div class="urgency">⏰ 限定100台！残り<span id="stock-count">23</span>台</div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="product-showcase">
+                        <div class="product-image">
+                            <img src="images/robot-hero.svg" alt="EcoClean Robot" class="product-img">
+                        </div>
+                        <div class="floating-features">
+                            <div class="floating-feature" style="top: 10%; left: -10%;">
+                                <span class="feature-icon">📱</span>
+                                <span>スマホ連携</span>
+                            </div>
+                            <div class="floating-feature" style="top: 30%; right: -15%;">
+                                <span class="feature-icon">🔇</span>
+                                <span>静音設計</span>
+                            </div>
+                            <div class="floating-feature" style="bottom: 20%; left: -5%;">
+                                <span class="feature-icon">⚡</span>
+                                <span>高速充電</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="problem-section">
+            <div class="container">
+                <h2 class="section-title">こんなお悩みありませんか？</h2>
+                <div class="problems-grid">
+                    <div class="problem-item">
+                        <div class="problem-icon">😩</div>
+                        <h3>毎日の掃除が面倒</h3>
+                        <p>仕事で忙しく、掃除に時間をかけられない</p>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-icon">💸</div>
+                        <h3>電気代が気になる</h3>
+                        <p>掃除機の電気代が月々の負担になっている</p>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-icon">🌍</div>
+                        <h3>環境への配慮が心配</h3>
+                        <p>エコ意識はあるけど、具体的な行動が取れない</p>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-icon">🏠</div>
+                        <h3>部屋の隅々まで掃除できない</h3>
+                        <p>家具の下やコーナーの掃除が大変</p>
+                    </div>
+                </div>
+                <div class="solution-arrow">
+                    <span>↓</span>
+                    <p>EcoCleanがすべて解決します！</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">EcoCleanの革新的な特徴</h2>
+                <div class="features-grid">
+                    <div class="feature-card main-feature">
+                        <div class="feature-image">
+                            <img src="images/features-ai.svg" alt="AI機能" class="feature-img">
+                        </div>
+                        <div class="feature-content">
+                            <h3>🧠 AI搭載で賢い掃除</h3>
+                            <p>最新のAI技術により、部屋の形状を学習し、最適な掃除ルートを自動計算。家具の配置も記憶して効率的に掃除します。</p>
+                            <ul class="feature-list">
+                                <li>部屋のマッピング機能</li>
+                                <li>障害物自動回避</li>
+                                <li>掃除パターン学習</li>
+                                <li>スケジュール自動調整</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔋</div>
+                        <h3>ソーラー充電システム</h3>
+                        <p>革新的なソーラーパネル搭載で、太陽光から自動充電。電気代を大幅削減し、環境にも優しい設計です。</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h3>100%エコ素材</h3>
+                        <p>本体は完全リサイクル可能な素材を使用。廃棄時も環境負荷を最小限に抑えた設計です。</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>スマホアプリ連携</h3>
+                        <p>専用アプリで外出先からも操作可能。掃除状況の確認や、スケジュール設定も簡単です。</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔇</div>
+                        <h3>超静音設計</h3>
+                        <p>図書館レベルの静音性を実現。早朝や深夜でも周囲を気にせず使用できます。</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">💨</div>
+                        <h3>強力吸引システム</h3>
+                        <p>ペットの毛やカーペットの奥の汚れまで、強力な吸引力でしっかり除去します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="specs" class="specs">
+            <div class="container">
+                <h2 class="section-title">詳細仕様</h2>
+                <div class="specs-container">
+                    <div class="specs-image">
+                        <img src="images/product-specs.svg" alt="製品仕様" class="specs-img">
+                    </div>
+                    <div class="specs-table">
+                        <div class="spec-row">
+                            <span class="spec-label">サイズ</span>
+                            <span class="spec-value">直径35cm × 高さ9cm</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">重量</span>
+                            <span class="spec-value">3.2kg</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">バッテリー</span>
+                            <span class="spec-value">リチウムイオン + ソーラー充電</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">稼働時間</span>
+                            <span class="spec-value">最大120分（通常モード）</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">充電時間</span>
+                            <span class="spec-value">3時間（AC）/ 日中自動（ソーラー）</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">対応床面積</span>
+                            <span class="spec-value">最大150㎡</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">騒音レベル</span>
+                            <span class="spec-value">45dB以下</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Wi-Fi</span>
+                            <span class="spec-value">2.4GHz / 5GHz対応</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">保証期間</span>
+                            <span class="spec-value">2年間（無料修理・交換）</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="section-title">お客様の声</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"仕事から帰ると部屋がピカピカ！しかも電気代がほとんどかからないのが嬉しいです。買って本当に良かった！"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩</div>
+                            <div class="author-info">
+                                <span class="author-name">田中 美香さん</span>
+                                <span class="author-age">30代・会社員</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"ペットを飼っているので毛の掃除が大変でしたが、EcoCleanなら完璧！しかも音が静かでペットも怖がりません。"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨</div>
+                            <div class="author-info">
+                                <span class="author-name">佐藤 健太さん</span>
+                                <span class="author-age">40代・自営業</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"環境に優しい製品を探していました。ソーラー充電で罪悪感なく使えて、掃除力も申し分なし！"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👵</div>
+                            <div class="author-info">
+                                <span class="author-name">山田 花子さん</span>
+                                <span class="author-age">50代・主婦</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="satisfaction-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">満足度</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">リピート率</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.8/5</div>
+                        <div class="stat-label">平均評価</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison">
+            <div class="container">
+                <h2 class="section-title">他社製品との比較</h2>
+                <div class="comparison-table">
+                    <div class="comparison-header">
+                        <div class="comparison-item">機能</div>
+                        <div class="comparison-item our-product">EcoClean</div>
+                        <div class="comparison-item">A社製品</div>
+                        <div class="comparison-item">B社製品</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="comparison-item">AI搭載</div>
+                        <div class="comparison-item our-product">✅</div>
+                        <div class="comparison-item">❌</div>
+                        <div class="comparison-item">❌</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="comparison-item">ソーラー充電</div>
+                        <div class="comparison-item our-product">✅</div>
+                        <div class="comparison-item">❌</div>
+                        <div class="comparison-item">❌</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="comparison-item">静音性</div>
+                        <div class="comparison-item our-product">45dB</div>
+                        <div class="comparison-item">60dB</div>
+                        <div class="comparison-item">55dB</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="comparison-item">稼働時間</div>
+                        <div class="comparison-item our-product">120分</div>
+                        <div class="comparison-item">90分</div>
+                        <div class="comparison-item">100分</div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="comparison-item">価格</div>
+                        <div class="comparison-item our-product">¥59,800</div>
+                        <div class="comparison-item">¥79,800</div>
+                        <div class="comparison-item">¥69,800</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2 class="section-title">今だけ特別価格！</h2>
+                
+                <div class="pricing-card">
+                    <div class="pricing-badge">🔥 限定オファー</div>
+                    <div class="pricing-header">
+                        <h3>EcoClean スターターセット</h3>
+                        <div class="price-breakdown">
+                            <div class="original-price">通常価格: ¥89,800</div>
+                            <div class="discount-amount">-¥30,000 OFF</div>
+                            <div class="final-price">¥59,800<span class="tax-note">（税込・送料無料）</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <h4>セット内容</h4>
+                        <ul>
+                            <li>✅ EcoClean本体</li>
+                            <li>✅ 充電ステーション</li>
+                            <li>✅ 交換用フィルター（3個）</li>
+                            <li>✅ 交換用ブラシ（2セット）</li>
+                            <li>✅ 専用スマホアプリ</li>
+                            <li>✅ 2年間保証</li>
+                            <li>✅ 30日間返金保証</li>
+                            <li>✅ 全国送料無料</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pricing-guarantees">
+                        <div class="guarantee-item">
+                            <span class="guarantee-icon">🚚</span>
+                            <span>送料無料</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <span class="guarantee-icon">↩️</span>
+                            <span>30日間返金保証</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <span class="guarantee-icon">🛠️</span>
+                            <span>2年間無料保証</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="urgency-banner">
+                    <p>⚠️ この特別価格は<strong>今月末まで</strong>の限定オファーです</p>
+                    <p>在庫残り<span id="stock-count-2" class="stock-number">23</span>台！</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="order" class="order">
+            <div class="container">
+                <h2 class="section-title">今すぐ注文して新しい生活を始めよう</h2>
+                
+                <div class="order-container">
+                    <div class="order-summary">
+                        <h3>ご注文内容</h3>
+                        <div class="order-item">
+                            <div class="item-image">
+                                <div class="image-placeholder">EcoClean</div>
+                            </div>
+                            <div class="item-details">
+                                <h4>EcoClean スターターセット</h4>
+                                <p>本体・充電ステーション・付属品一式</p>
+                                <div class="item-price">
+                                    <span class="original">¥89,800</span>
+                                    <span class="sale">¥59,800</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-total">
+                            <div class="total-row">
+                                <span>商品代金</span>
+                                <span>¥59,800</span>
+                            </div>
+                            <div class="total-row">
+                                <span>送料</span>
+                                <span class="free">無料</span>
+                            </div>
+                            <div class="total-row final">
+                                <span>合計</span>
+                                <span>¥59,800</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="order-form">
+                        <h3>お客様情報</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lastName">姓 <span class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstName">名 <span class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">電話番号 <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="zipCode">郵便番号 <span class="required">*</span></label>
+                            <input type="text" id="zipCode" name="zipCode" placeholder="000-0000" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">住所 <span class="required">*</span></label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="paymentMethod">お支払い方法 <span class="required">*</span></label>
+                            <select id="paymentMethod" name="paymentMethod" required>
+                                <option value="">選択してください</option>
+                                <option value="credit">クレジットカード</option>
+                                <option value="bank">銀行振込</option>
+                                <option value="cod">代金引換</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                <span class="checkmark"></span>
+                                <a href="#" class="terms-link">利用規約</a>と<a href="#" class="privacy-link">プライバシーポリシー</a>に同意します
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="order-button">
+                            <span class="button-text">注文を確定する</span>
+                            <span class="button-subtext">30日間返金保証付き</span>
+                        </button>
+                        
+                        <div class="security-notice">
+                            <span class="security-icon">🔒</span>
+                            <span>SSL暗号化通信で個人情報を保護</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>まだ迷っていますか？</h2>
+                    <p>EcoCleanがあなたの生活を変える3つの理由</p>
+                    
+                    <div class="final-reasons">
+                        <div class="reason-item">
+                            <span class="reason-number">1</span>
+                            <div class="reason-content">
+                                <h3>時間の節約</h3>
+                                <p>毎日30分の掃除時間が自由時間に！</p>
+                            </div>
+                        </div>
+                        <div class="reason-item">
+                            <span class="reason-number">2</span>
+                            <div class="reason-content">
+                                <h3>光熱費の削減</h3>
+                                <p>ソーラー充電で月々の電気代を大幅カット！</p>
+                            </div>
+                        </div>
+                        <div class="reason-item">
+                            <span class="reason-number">3</span>
+                            <div class="reason-content">
+                                <h3>環境貢献</h3>
+                                <p>使うだけでエコ活動に参加できる！</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="final-urgency">
+                        <p class="urgency-text">⏰ 特別価格は<span class="countdown" id="countdown">残り 2日 14時間 32分</span>で終了！</p>
+                        <a href="#order" class="final-cta-button">
+                            今すぐ特別価格で注文する
+                            <small>¥59,800（税込・送料無料）</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">🤖</span>
+                    <span>EcoClean</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">利用規約</a>
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">特定商取引法</a>
+                    <a href="#">お問い合わせ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EcoClean. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
