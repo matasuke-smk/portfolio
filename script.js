@@ -67,8 +67,13 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 
-    // Initialize EmailJS
-    emailjs.init("UYGm364oouCsOleC8"); // EmailJSの公開キーを設定
+    // Initialize EmailJS with error handling
+    try {
+        emailjs.init("UYGm364oouCsOleC8");
+        console.log("EmailJS initialized successfully");
+    } catch (error) {
+        console.error("EmailJS initialization failed:", error);
+    }
 
     const contactForm = document.querySelector('.contact-form');
     contactForm.addEventListener('submit', function(e) {
@@ -86,20 +91,68 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.textContent = '送信中...';
             submitBtn.disabled = true;
 
-            // Send email using EmailJS
-            emailjs.send("service_dxjb517", "template_by3wlbc", {
+            console.log("Attempting to send email with data:", {
                 from_name: name,
                 from_email: email,
-                message: message,
-                to_email: "bechan.lx250e@gmail.com"
-            })
+                message: message
+            });
+
+            // Check if EmailJS is available
+            if (typeof emailjs === 'undefined') {
+                console.error('EmailJS is not loaded');
+                alert('メール送信サービスが読み込まれていません。ページを再読み込みしてください。');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                return;
+            }
+
+            // Create timeout promise (10 seconds)
+            const timeoutPromise = new Promise((_, reject) => {
+                setTimeout(() => reject(new Error('Timeout: 送信がタイムアウトしました')), 10000);
+            });
+
+            // Send email using EmailJS with timeout
+            const emailPromise = emailjs.send("service_dxjb517", "template_by3wlbc", {
+                from_name: name,
+                from_email: email,
+                message: message
+            });
+
+            Promise.race([emailPromise, timeoutPromise])
             .then(function(response) {
+                console.log('EmailJS Response:', response);
+                console.log('Email sent successfully at:', new Date().toISOString());
                 alert('メールが正常に送信されました！ご連絡いただきありがとうございます。');
                 contactForm.reset();
             })
             .catch(function(error) {
-                console.error('送信エラー:', error);
-                alert('送信に失敗しました。しばらく後にもう一度お試しください。');
+                console.error('EmailJS Error Details:', error);
+                console.error('Error occurred at:', new Date().toISOString());
+                
+                if (error.message && error.message.includes('Timeout')) {
+                    console.error('Request timed out');
+                    alert('送信がタイムアウトしました。インターネット接続を確認してもう一度お試しください。');
+                } else {
+                    console.error('Error status:', error.status);
+                    console.error('Error text:', error.text);
+                    
+                    let errorMessage = '送信に失敗しました。';
+                    if (error.status === 400) {
+                        errorMessage += ' フォームの設定に問題があります。';
+                    } else if (error.status === 401) {
+                        errorMessage += ' 認証エラーです。';
+                    } else if (error.status === 402) {
+                        errorMessage += ' 送信制限に達しています。';
+                    } else if (error.status === 403) {
+                        errorMessage += ' アクセスが拒否されました。';
+                    } else if (error.status === 404) {
+                        errorMessage += ' サービスまたはテンプレートが見つかりません。';
+                    } else {
+                        errorMessage += ' ネットワークエラーの可能性があります。';
+                    }
+                    
+                    alert(errorMessage + '\n\n詳細: ' + (error.text || error.message || 'Unknown error'));
+                }
             })
             .finally(function() {
                 submitBtn.textContent = originalText;
