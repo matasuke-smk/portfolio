@@ -1,4 +1,40 @@
+function scrollToTop(event) {
+    event.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    // モバイルメニューの実装
+    const mobileMenuButton = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (mobileMenuButton && navMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            mobileMenuButton.classList.toggle('active');
+        });
+        
+        // メニュー項目クリック時に閉じる
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                mobileMenuButton.classList.remove('active');
+            });
+        });
+        
+        // 画面外クリック時に閉じる
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuButton.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileMenuButton.classList.remove('active');
+            }
+        });
+    }
+
     let stockCount = 23;
     
     const updateStockCount = () => {
@@ -69,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 clearInterval(timer);
             } else {
                 if (suffix === '/5') {
-                    element.textContent = (count / 10).toFixed(1) + suffix;
+                    element.textContent = (count).toFixed(1) + suffix;
                 } else {
                     element.textContent = Math.floor(count) + suffix;
                 }
@@ -87,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else if (value.includes('95')) {
                     countUp(target, 95, '%');
                 } else if (value.includes('4.8')) {
-                    countUp(target, 48, '/5');
+                    countUp(target, 4.8, '/5');
                 }
                 statsObserver.unobserve(target);
             }
@@ -147,20 +183,21 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(updateCountdown, 1000);
     }
 
-    const navbar = document.querySelector('.header');
-    let lastScrollTop = 0;
-    
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            navbar.style.transform = 'translateY(0)';
-        }
-        
-        lastScrollTop = scrollTop;
-    });
+    // ヘッダーは常に表示されるように設定
+    // const navbar = document.querySelector('.header');
+    // let lastScrollTop = 0;
+    // 
+    // window.addEventListener('scroll', function() {
+    //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    //     
+    //     if (scrollTop > lastScrollTop && scrollTop > 100) {
+    //         navbar.style.transform = 'translateY(-100%)';
+    //     } else {
+    //         navbar.style.transform = 'translateY(0)';
+    //     }
+    //     
+    //     lastScrollTop = scrollTop;
+    // });
 
     const floatingFeatures = document.querySelectorAll('.floating-feature');
     floatingFeatures.forEach((feature, index) => {

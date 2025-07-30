@@ -67,6 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 
+    // Initialize EmailJS
+    emailjs.init("UYGm364oouCsOleC8"); // EmailJSの公開キーを設定
+
     const contactForm = document.querySelector('.contact-form');
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -77,8 +80,31 @@ document.addEventListener('DOMContentLoaded', function() {
         const message = formData.get('message');
 
         if (name && email && message) {
-            alert('お問い合わせありがとうございます。後日ご連絡させていただきます。');
-            contactForm.reset();
+            // Show loading state
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = '送信中...';
+            submitBtn.disabled = true;
+
+            // Send email using EmailJS
+            emailjs.send("service_dxjb517", "template_by3wlbc", {
+                from_name: name,
+                from_email: email,
+                message: message,
+                to_email: "bechan.lx250e@gmail.com"
+            })
+            .then(function(response) {
+                alert('メールが正常に送信されました！ご連絡いただきありがとうございます。');
+                contactForm.reset();
+            })
+            .catch(function(error) {
+                console.error('送信エラー:', error);
+                alert('送信に失敗しました。しばらく後にもう一度お試しください。');
+            })
+            .finally(function() {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         } else {
             alert('すべての項目を入力してください。');
         }
@@ -100,4 +126,40 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Responsive image swapping based on screen size
+    function updateProjectImages() {
+        const projectImages = document.querySelectorAll('.project-img');
+        const isMobile = window.innerWidth <= 480;
+        
+        projectImages.forEach(img => {
+            const originalSrc = img.src;
+            
+            if (originalSrc.includes('project-corporate')) {
+                if (isMobile) {
+                    img.src = 'images/project-corporate-mobile.svg';
+                } else {
+                    img.src = 'images/project-corporate-pc.svg';
+                }
+            } else if (originalSrc.includes('project-landing')) {
+                if (isMobile) {
+                    img.src = 'images/project-landing-mobile.svg';
+                } else {
+                    img.src = 'images/project-landing-pc.svg';
+                }
+            } else if (originalSrc.includes('project-portfolio')) {
+                if (isMobile) {
+                    img.src = 'images/project-portfolio-mobile.svg';
+                } else {
+                    img.src = 'images/project-portfolio-pc.svg';
+                }
+            }
+        });
+    }
+
+    // Initial image update
+    updateProjectImages();
+
+    // Update images on window resize
+    window.addEventListener('resize', updateProjectImages);
 });

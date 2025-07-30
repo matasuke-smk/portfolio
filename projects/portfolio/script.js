@@ -1,4 +1,21 @@
+function scrollToTop(event) {
+    event.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Logo click functionality
+    const navLogo = document.querySelector('.nav-logo');
+    if (navLogo) {
+        navLogo.addEventListener('click', function(e) {
+            e.preventDefault();
+            scrollToTop(e);
+        });
+    }
+
     // Custom cursor
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorOutline = document.querySelector('.cursor-outline');
@@ -44,21 +61,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // ヘッダーは常に表示されるように設定
     // Header scroll effect
-    const header = document.querySelector('.header');
-    let lastScrollTop = 0;
+    // const header = document.querySelector('.header');
+    // let lastScrollTop = 0;
 
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            header.style.transform = 'translateY(0)';
-        }
-        
-        lastScrollTop = scrollTop;
-    });
+    // window.addEventListener('scroll', function() {
+    //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    //     
+    //     if (scrollTop > lastScrollTop && scrollTop > 100) {
+    //         header.style.transform = 'translateY(-100%)';
+    //     } else {
+    //         header.style.transform = 'translateY(0)';
+    //     }
+    //     
+    //     lastScrollTop = scrollTop;
+    // });
 
     // Portfolio filter
     const filterBtns = document.querySelectorAll('.filter-btn');

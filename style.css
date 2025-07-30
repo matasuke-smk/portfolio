@@ -206,7 +206,7 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -223,11 +223,14 @@ body {
 }
 
 .project-image {
-    height: 200px;
+    aspect-ratio: 5/3;
+    width: 100%;
     background: #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 
 .project-placeholder {
@@ -278,7 +281,12 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.project-img:hover {
+    transform: scale(1.05);
 }
 
 .contact {
@@ -380,6 +388,14 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .nav-container {
+        padding: 1rem 15px;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -417,28 +433,202 @@ body {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .hero {
+        padding: 0 15px;
+    }
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    .about {
+        padding: 60px 0;
     }
 
     .about-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
         text-align: center;
+    }
+
+    .profile-placeholder {
+        width: 200px;
+        height: 200px;
+        font-size: 1rem;
+    }
+
+    .skills {
+        padding: 60px 0;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .skill-item {
+        padding: 1.5rem;
+    }
+
+    .projects {
+        padding: 60px 0;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+
+    .contact {
+        padding: 60px 0;
     }
 
     .contact-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .nav-container {
+        padding: 1rem 10px;
+    }
+
+    .nav-logo {
+        font-size: 1.3rem;
+    }
+
+    .hero {
+        padding: 0 10px;
+        min-height: 80vh;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-btn {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+
+    .about {
+        padding: 40px 0;
+    }
+
+    .about-content {
+        gap: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .profile-placeholder {
+        width: 150px;
+        height: 150px;
+        font-size: 0.9rem;
+    }
+
+    .skills {
+        padding: 40px 0;
+    }
+
+    .skill-item {
+        padding: 1rem;
+    }
+
+    .skill-icon {
+        font-size: 2.5rem;
+    }
+
+    .projects {
+        padding: 40px 0;
+    }
+
+
+    .project-content {
+        padding: 1rem;
+    }
+
+    .project-content p {
+        font-size: 0.9rem;
+    }
+
+    .project-content {
+        padding: 1rem;
+    }
+
+    .project-content p {
+        font-size: 0.9rem;
+    }
+
+    .tech-tag {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+    }
+
+    .contact {
+        padding: 40px 0;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer {
+        padding: 1.5rem 0;
+        font-size: 0.9rem;
     }
 }

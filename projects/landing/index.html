@@ -11,10 +11,10 @@
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
-                <div class="nav-logo">
+                <a href="#" class="nav-logo" onclick="scrollToTop(event)">
                     <span class="logo-icon">🤖</span>
                     <span>EcoClean</span>
-                </div>
+                </a>
                 <ul class="nav-menu">
                     <li><a href="#features" class="nav-link">特徴</a></li>
                     <li><a href="#specs" class="nav-link">仕様</a></li>
@@ -22,6 +22,11 @@
                     <li><a href="#pricing" class="nav-link">価格</a></li>
                 </ul>
                 <a href="#order" class="nav-cta">今すぐ注文</a>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </nav>
     </header>
@@ -282,47 +287,105 @@
         <section class="comparison">
             <div class="container">
                 <h2 class="section-title">他社製品との比較</h2>
-                <div class="comparison-table">
-                    <div class="comparison-header">
-                        <div class="comparison-item">機能</div>
-                        <div class="comparison-item our-product">EcoClean</div>
-                        <div class="comparison-item">A社製品</div>
-                        <div class="comparison-item">B社製品</div>
-                    </div>
-                    
-                    <div class="comparison-row">
-                        <div class="comparison-item">AI搭載</div>
-                        <div class="comparison-item our-product">✅</div>
-                        <div class="comparison-item">❌</div>
-                        <div class="comparison-item">❌</div>
-                    </div>
-                    
-                    <div class="comparison-row">
-                        <div class="comparison-item">ソーラー充電</div>
-                        <div class="comparison-item our-product">✅</div>
-                        <div class="comparison-item">❌</div>
-                        <div class="comparison-item">❌</div>
-                    </div>
-                    
-                    <div class="comparison-row">
-                        <div class="comparison-item">静音性</div>
-                        <div class="comparison-item our-product">45dB</div>
-                        <div class="comparison-item">60dB</div>
-                        <div class="comparison-item">55dB</div>
-                    </div>
-                    
-                    <div class="comparison-row">
-                        <div class="comparison-item">稼働時間</div>
-                        <div class="comparison-item our-product">120分</div>
-                        <div class="comparison-item">90分</div>
-                        <div class="comparison-item">100分</div>
-                    </div>
-                    
-                    <div class="comparison-row">
-                        <div class="comparison-item">価格</div>
-                        <div class="comparison-item our-product">¥59,800</div>
-                        <div class="comparison-item">¥79,800</div>
-                        <div class="comparison-item">¥69,800</div>
+                <div class="comparison-wrapper">
+                    <div class="comparison-cards">
+                        <div class="comparison-card our-product-card">
+                            <div class="product-header">
+                                <h3>EcoClean</h3>
+                                <div class="product-badge">推奨！</div>
+                            </div>
+                            <div class="product-features">
+                                <div class="feature-row">
+                                    <span class="feature-label">AI搭載</span>
+                                    <span class="feature-value good">✅ 搭載</span>
+                                </div>
+                                <div class="feature-row">
+                                    <span class="feature-label">ソーラー充電</span>
+                                    <span class="feature-value good">✅ 対応</span>
+                                </div>
+                                <div class="feature-row">
+                                    <span class="feature-label">静音性</span>
+                                    <span class="feature-value good">45dB（超静音）</span>
+                                </div>
+                                <div class="feature-row">
+                                    <span class="feature-label">稼働時間</span>
+                                    <span class="feature-value good">120分（長時間）</span>
+                                </div>
+                                <div class="feature-row">
+                                    <span class="feature-label">環境配慮</span>
+                                    <span class="feature-value good">✅ 100%リサイクル可能</span>
+                                </div>
+                                <div class="price-section">
+                                    <div class="price-label">特別価格</div>
+                                    <div class="price-value">¥59,800</div>
+                                    <div class="price-original">通常価格: ¥89,800</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-card">
+                            <div class="product-header">
+                                <h3>A社製品</h3>
+                            </div>
+                            <div class="product-features">
+                                <div class="feature-row">
+                                    <span class="feature-label">AI搭載</span>
+                                    <span class="feature-value bad">❌ なし</span>
+                                </div>
+                                <div class="feature-row">
+                                    <span class="feature-label">ソーラー充電</span>
+                                    <span class="feature-value bad">❌ なし</span>
+                                </div>
+                                <div class="feature-row">
+                                    <span class="feature-label">静音性</span>
+                                    <span class="feature-value bad">60dB（やや騒音）</span>
+                                </div>
+                                <div class="feature-row">
+                                    <span class="feature-label">稼働時間</span>
+                                    <span class="feature-value bad">90分（短め）</span>
+                                </div>
+                                <div class="feature-row">
+                                    <span class="feature-label">環境配慮</span>
+                                    <span class="feature-value bad">❌ 限定的</span>
+                                </div>
+                                <div class="price-section">
+                                    <div class="price-label">価格</div>
+                                    <div class="price-value">¥79,800</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-card">
+                            <div class="product-header">
+                                <h3>B社製品</h3>
+                            </div>
+                            <div class="product-features">
+                                <div class="feature-row">
+                                    <span class="feature-label">AI搭載</span>
+                                    <span class="feature-value bad">❌ なし</span>
+                                </div>
+                                <div class="feature-row">
+                                    <span class="feature-label">ソーラー充電</span>
+                                    <span class="feature-value bad">❌ なし</span>
+                                </div>
+                                <div class="feature-row">
+                                    <span class="feature-label">静音性</span>
+                                    <span class="feature-value neutral">55dB（普通）</span>
+                                </div>
+                                <div class="feature-row">
+                                    <span class="feature-label">稼働時間</span>
+                                    <span class="feature-value neutral">100分（標準的）</span>
+                                </div>
+                                <div class="feature-row">
+                                    <span class="feature-label">環境配慮</span>
+                                    <span class="feature-value bad">❌ なし</span>
+                                </div>
+                                <div class="price-section">
+                                    <div class="price-label">価格</div>
+                                    <div class="price-value">¥69,800</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
