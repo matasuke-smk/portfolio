@@ -1,0 +1,116 @@
+<svg width="300" height="180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="landing-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F5E8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C8E6C9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="product-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#66BB6A;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="cta-gradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F7931E;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#landing-bg)" rx="8"/>
+  
+  <!-- Landing page layout -->
+  <rect x="25" y="15" width="250" height="130" fill="#FFFFFF" stroke="#4CAF50" stroke-width="2" rx="5"/>
+  
+  <!-- Header -->
+  <rect x="25" y="15" width="250" height="14" fill="#4CAF50" rx="5"/>
+  <text x="150" y="24" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF" text-anchor="middle">EcoClean</text>
+  <circle cx="40" cy="22" r="2.5" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Hero section with product -->
+  <rect x="35" y="35" width="95" height="45" fill="#E8F5E8"/>
+  <text x="82.5" y="43" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#2E7D32" text-anchor="middle">未来のお掃除を</text>
+  <text x="82.5" y="51" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#FF6B35" text-anchor="middle">今すぐ体験</text>
+  <text x="82.5" y="58" font-family="Arial, sans-serif" font-size="3.5" fill="#2E7D32" text-anchor="middle">AI搭載・環境に優しい</text>
+  <text x="82.5" y="64" font-family="Arial, sans-serif" font-size="3.5" fill="#2E7D32" text-anchor="middle">革新的お掃除ロボット</text>
+  
+  <!-- Product image -->
+  <circle cx="190" cy="57.5" r="20" fill="url(#product-gradient)"/>
+  <rect x="180" y="42" width="20" height="4" fill="#2196F3" rx="2"/>
+  <circle cx="184" cy="50" r="2" fill="#1976D2"/>
+  <circle cx="196" cy="50" r="2" fill="#1976D2"/>
+  <rect x="187" y="57" width="6" height="2.5" fill="#1976D2" rx="1"/>
+  <ellipse cx="190" cy="72" rx="16" ry="3" fill="#2E7D32"/>
+  
+  <!-- Price display -->
+  <rect x="35" y="85" width="95" height="12" fill="#FFF3E0"/>
+  <text x="52" y="90" font-family="Arial, sans-serif" font-size="3.5" fill="#999" text-decoration="line-through">¥89,800</text>
+  <text x="82.5" y="93" font-family="Arial, sans-serif" font-size="5" font-weight="bold" fill="#FF6B35" text-anchor="middle">¥59,800</text>
+  <rect x="112" y="87.5" width="12" height="4" fill="#FF6B35" rx="2"/>
+  <text x="118" y="90" font-family="Arial, sans-serif" font-size="2.5" fill="#FFFFFF" text-anchor="middle">33%OFF</text>
+  
+  <!-- CTA Button -->
+  <rect x="140" y="85" width="45" height="12" fill="url(#cta-gradient)" rx="6"/>
+  <text x="162.5" y="92" font-family="Arial, sans-serif" font-size="5" font-weight="bold" fill="#FFFFFF" text-anchor="middle">今すぐ注文</text>
+  
+  <!-- Features -->
+  <rect x="35" y="102" width="210" height="20" fill="#F8F9FA"/>
+  
+  <!-- Feature icons (horizontal layout) -->
+  <circle cx="50" cy="110" r="4" fill="#2196F3"/>
+  <text x="50" y="112" font-family="Arial, sans-serif" font-size="3" fill="#FFFFFF" text-anchor="middle">🧠</text>
+  <text x="50" y="118" font-family="Arial, sans-serif" font-size="2.5" fill="#2196F3" text-anchor="middle">AI</text>
+  
+  <circle cx="70" cy="110" r="4" fill="#FF9800"/>
+  <text x="70" y="112" font-family="Arial, sans-serif" font-size="3" fill="#FFFFFF" text-anchor="middle">🔋</text>
+  <text x="70" y="118" font-family="Arial, sans-serif" font-size="2.5" fill="#FF9800" text-anchor="middle">ソーラー</text>
+  
+  <circle cx="90" cy="110" r="4" fill="#4CAF50"/>
+  <text x="90" y="112" font-family="Arial, sans-serif" font-size="3" fill="#FFFFFF" text-anchor="middle">🌿</text>
+  <text x="90" y="118" font-family="Arial, sans-serif" font-size="2.5" fill="#4CAF50" text-anchor="middle">エコ</text>
+  
+  <circle cx="110" cy="110" r="4" fill="#9C27B0"/>
+  <text x="110" y="112" font-family="Arial, sans-serif" font-size="3" fill="#FFFFFF" text-anchor="middle">📱</text>
+  <text x="110" y="118" font-family="Arial, sans-serif" font-size="2.5" fill="#9C27B0" text-anchor="middle">アプリ</text>
+  
+  <circle cx="130" cy="110" r="4" fill="#607D8B"/>
+  <text x="130" y="112" font-family="Arial, sans-serif" font-size="3" fill="#FFFFFF" text-anchor="middle">🔇</text>
+  <text x="130" y="118" font-family="Arial, sans-serif" font-size="2.5" fill="#607D8B" text-anchor="middle">静音</text>
+  
+  <circle cx="150" cy="110" r="4" fill="#795548"/>
+  <text x="150" y="112" font-family="Arial, sans-serif" font-size="3" fill="#FFFFFF" text-anchor="middle">⚡</text>
+  <text x="150" y="118" font-family="Arial, sans-serif" font-size="2.5" fill="#795548" text-anchor="middle">高速</text>
+  
+  <circle cx="170" cy="110" r="4" fill="#E91E63"/>
+  <text x="170" y="112" font-family="Arial, sans-serif" font-size="3" fill="#FFFFFF" text-anchor="middle">📱</text>
+  <text x="170" y="118" font-family="Arial, sans-serif" font-size="2.5" fill="#E91E63" text-anchor="middle">連携</text>
+  
+  <circle cx="190" cy="110" r="4" fill="#009688"/>
+  <text x="190" y="112" font-family="Arial, sans-serif" font-size="3" fill="#FFFFFF" text-anchor="middle">🌟</text>
+  <text x="190" y="118" font-family="Arial, sans-serif" font-size="2.5" fill="#009688" text-anchor="middle">自動</text>
+  
+  <circle cx="210" cy="110" r="4" fill="#673AB7"/>
+  <text x="210" y="112" font-family="Arial, sans-serif" font-size="3" fill="#FFFFFF" text-anchor="middle">🔄</text>
+  <text x="210" y="118" font-family="Arial, sans-serif" font-size="2.5" fill="#673AB7" text-anchor="middle">定期</text>
+  
+  <circle cx="230" cy="110" r="4" fill="#FF5722"/>
+  <text x="230" y="112" font-family="Arial, sans-serif" font-size="3" fill="#FFFFFF" text-anchor="middle">📊</text>
+  <text x="230" y="118" font-family="Arial, sans-serif" font-size="2.5" fill="#FF5722" text-anchor="middle">分析</text>
+  
+  <!-- Urgency banner -->
+  <rect x="35" y="127" width="210" height="8" fill="#FFE0B2"/>
+  <text x="140" y="132" font-family="Arial, sans-serif" font-size="5" font-weight="bold" fill="#BF360C" text-anchor="middle">⏰ 限定100台！残り23台</text>
+  
+  <!-- Floating elements -->
+  <rect x="5" y="60" width="20" height="15" fill="#FFFFFF" stroke="#4CAF50" rx="2" opacity="0.9"/>
+  <text x="15" y="65" font-family="Arial, sans-serif" font-size="2.5" fill="#4CAF50" text-anchor="middle">⭐⭐⭐⭐⭐</text>
+  <text x="15" y="68" font-family="Arial, sans-serif" font-size="2" fill="#666" text-anchor="middle">"最高！"</text>
+  <text x="15" y="71" font-family="Arial, sans-serif" font-size="2" fill="#666" text-anchor="middle">田中様</text>
+  
+  <rect x="280" y="45" width="18" height="12" fill="#FFFFFF" stroke="#FF9800" rx="2" opacity="0.9"/>
+  <text x="289" y="50" font-family="Arial, sans-serif" font-size="2.5" fill="#FF9800" text-anchor="middle">98%</text>
+  <text x="289" y="54" font-family="Arial, sans-serif" font-size="2" fill="#666" text-anchor="middle">満足度</text>
+  
+  <!-- Brand name at bottom -->
+  <text x="150" y="160" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="middle">
+    EcoClean
+  </text>
+</svg>

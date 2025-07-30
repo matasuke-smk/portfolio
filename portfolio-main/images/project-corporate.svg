@@ -1,0 +1,92 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="corporate-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screen-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F8F9FA;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#corporate-bg)" rx="15"/>
+  
+  <!-- Desktop mockup -->
+  <rect x="60" y="50" width="280" height="180" fill="#2C3E50" rx="10"/>
+  <rect x="70" y="60" width="260" height="150" fill="url(#screen-bg)"/>
+  <circle cx="200" cy="225" r="8" fill="#34495E"/>
+  
+  <!-- Website header -->
+  <rect x="70" y="60" width="260" height="30" fill="#2c5aa0"/>
+  <circle cx="85" cy="75" r="3" fill="#FFFFFF"/>
+  <circle cx="95" cy="75" r="3" fill="#FFFFFF"/>
+  <circle cx="105" cy="75" r="3" fill="#FFFFFF"/>
+  <text x="200" y="80" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">TechSolutions</text>
+  
+  <!-- Navigation -->
+  <rect x="80" y="100" width="240" height="15" fill="#F8F9FA"/>
+  <rect x="90" y="105" width="30" height="5" fill="#2c5aa0"/>
+  <rect x="130" y="105" width="25" height="5" fill="#6C757D"/>
+  <rect x="165" y="105" width="30" height="5" fill="#6C757D"/>
+  <rect x="205" y="105" width="25" height="5" fill="#6C757D"/>
+  <rect x="240" y="105" width="30" height="5" fill="#6C757D"/>
+  
+  <!-- Hero section -->
+  <rect x="90" y="125" width="120" height="40" fill="#E3F2FD"/>
+  <rect x="95" y="135" width="80" height="6" fill="#2c5aa0"/>
+  <rect x="95" y="145" width="60" height="4" fill="#6C757D"/>
+  <rect x="95" y="152" width="70" height="4" fill="#6C757D"/>
+  
+  <!-- Service cards -->
+  <rect x="220" y="125" width="45" height="25" fill="#FFFFFF" stroke="#E0E0E0"/>
+  <rect x="225" y="130" width="15" height="4" fill="#4CAF50"/>
+  <rect x="225" y="138" width="25" height="2" fill="#6C757D"/>
+  <rect x="225" y="142" width="20" height="2" fill="#6C757D"/>
+  
+  <rect x="275" y="125" width="45" height="25" fill="#FFFFFF" stroke="#E0E0E0"/>
+  <rect x="280" y="130" width="15" height="4" fill="#FF9800"/>
+  <rect x="280" y="138" width="25" height="2" fill="#6C757D"/>
+  <rect x="280" y="142" width="20" height="2" fill="#6C757D"/>
+  
+  <rect x="220" y="155" width="45" height="25" fill="#FFFFFF" stroke="#E0E0E0"/>
+  <rect x="225" y="160" width="15" height="4" fill="#E91E63"/>
+  <rect x="225" y="168" width="25" height="2" fill="#6C757D"/>
+  <rect x="225" y="172" width="20" height="2" fill="#6C757D"/>
+  
+  <rect x="275" y="155" width="45" height="25" fill="#FFFFFF" stroke="#E0E0E0"/>
+  <rect x="280" y="160" width="15" height="4" fill="#9C27B0"/>
+  <rect x="280" y="168" width="25" height="2" fill="#6C757D"/>
+  <rect x="280" y="172" width="20" height="2" fill="#6C757D"/>
+  
+  <!-- Stats section -->
+  <rect x="90" y="175" width="230" height="25" fill="#F8F9FA"/>
+  <text x="120" y="185" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#2c5aa0" text-anchor="middle">500+</text>
+  <text x="120" y="193" font-family="Arial, sans-serif" font-size="6" fill="#6C757D" text-anchor="middle">Projects</text>
+  
+  <text x="170" y="185" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#2c5aa0" text-anchor="middle">200+</text>
+  <text x="170" y="193" font-family="Arial, sans-serif" font-size="6" fill="#6C757D" text-anchor="middle">Clients</text>
+  
+  <text x="220" y="185" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#2c5aa0" text-anchor="middle">98%</text>
+  <text x="220" y="193" font-family="Arial, sans-serif" font-size="6" fill="#6C757D" text-anchor="middle">Satisfaction</text>
+  
+  <!-- Floating elements -->
+  <circle cx="30" cy="80" r="10" fill="#FFFFFF" opacity="0.8"/>
+  <rect x="25" y="75" width="10" height="10" fill="#2c5aa0" opacity="0.6"/>
+  
+  <polygon points="370,60 380,50 390,60 380,70" fill="#FFFFFF" opacity="0.8"/>
+  
+  <circle cx="40" cy="200" r="8" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="35" y="195" width="10" height="10" fill="#4CAF50" opacity="0.7"/>
+  
+  <rect x="350" y="180" width="15" height="15" fill="#FFFFFF" opacity="0.8" transform="rotate(45 357.5 187.5)"/>
+  
+  <!-- Company branding -->
+  <text x="200" y="260" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    TechSolutions
+  </text>
+  <text x="200" y="280" font-family="Arial, sans-serif" font-size="12" fill="#E8E9FA" text-anchor="middle">
+    IT技術で未来を創造する企業サイト
+  </text>
+</svg>

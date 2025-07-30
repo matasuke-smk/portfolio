@@ -1,0 +1,49 @@
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mobile-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#mobile-bg)"/>
+  
+  <!-- Phone mockup -->
+  <rect x="150" y="30" width="100" height="180" rx="20" fill="#333333"/>
+  <rect x="160" y="45" width="80" height="150" fill="#000000"/>
+  
+  <!-- Screen content -->
+  <rect x="160" y="45" width="80" height="150" fill="#ffffff"/>
+  
+  <!-- App header -->
+  <rect x="160" y="45" width="80" height="25" fill="#2c5aa0"/>
+  <text x="200" y="62" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    FinTech App
+  </text>
+  
+  <!-- Balance card -->
+  <rect x="170" y="80" width="60" height="30" rx="8" fill="#4caf50"/>
+  <text x="200" y="95" font-family="Arial, sans-serif" font-size="8" fill="#ffffff" text-anchor="middle">残高</text>
+  <text x="200" y="105" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">¥1,234,567</text>
+  
+  <!-- Transaction list -->
+  <rect x="170" y="120" width="60" height="8" fill="#e8f5e8"/>
+  <rect x="170" y="135" width="60" height="8" fill="#fff3e0"/>
+  <rect x="170" y="150" width="60" height="8" fill="#f3e5f5"/>
+  <rect x="170" y="165" width="60" height="8" fill="#e3f2fd"/>
+  
+  <!-- Home button -->
+  <circle cx="200" cy="210" r="8" fill="#666666"/>
+  
+  <!-- Icons around phone -->
+  <circle cx="80" cy="100" r="15" fill="#4caf50" opacity="0.8"/>
+  <text x="80" y="105" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">$</text>
+  
+  <rect x="310" y="85" width="30" height="30" rx="8" fill="#2196f3" opacity="0.8"/>
+  <rect x="320" y="95" width="10" height="10" fill="#ffffff"/>
+  
+  <text x="200" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c5aa0" text-anchor="middle">
+    フィンテックアプリ
+  </text>
+</svg>
